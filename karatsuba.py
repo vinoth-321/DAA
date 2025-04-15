@@ -17,8 +17,11 @@ def karatsuba(s1,s2):
     y=karatsuba(str(int(h1)+int(l1)),str(int(h2)+int(l2)))
     z=karatsuba(h1,h2)
 
+    a=z+"".zfill(half*2)
+    b=str(int(y)-int(z)-int(x))+"".zfill(half)
+
     
-    return str(int(z)*(10**(half*2))+(int(y)-int(z)-int(x))*(10**half)+int(x))
+    return str(int(a)+int(b)+int(x))
 
 
 print(karatsuba("100000","1000000"))
